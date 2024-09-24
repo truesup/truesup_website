@@ -37,7 +37,7 @@ body,
 }
 img {
   display: block;
-  min-width: 100%;
+  /* min-width: 100%; */
 }
 input,
 textarea,
@@ -83,19 +83,22 @@ body {
   --color-light-accent: #e2e8e7;
 
   --border-radius: 20px;
-
-  --grid-gap: 20px;
 }
 
-/* ну погнали */
+.visually-hidden {
+  display: none;
+}
+
+/* ну погнали 1rem = 16px */
 body {
+  max-height: 100vh;
+  max-width: 100vw;
   font-family: var(--font-family-base);
   background-color: var(--color-blue-substrate);
-  height: 100vh;
   display: grid;
-  grid-template-rows: 13vh 52vh 15vh 12vh;
+  grid-template-rows: 13vh 52vh 15vh 13vh;
   grid-template-columns: 35vw 10vw 23vw 28vw;
-  gap: var(--grid-gap);
+  gap: 20px;
 }
 header {
   background-color: var(--color-blue-main);
@@ -108,17 +111,6 @@ header {
   grid-row: 2 / 3;
   grid-column: 1 / 3;
   margin-left: 20px;
-  padding: 44px;
-}
-.greeting-welcome {
-  color: var(--color-white);
-  font-size: 40px;
-  margin-bottom: 25px;
-}
-.greeting-msg {
-  font-family: var(--font-family-accent);
-  font-size: 32px;
-  color: var(--color-white);
 }
 .photo {
   background-color: var(--color-blue-accent);
@@ -154,4 +146,73 @@ header,
 .cv,
 .contacts {
   border-radius: var(--border-radius);
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: 20px;
+  position: relative;
+}
+.lang-settings {
+  position: absolute;
+  right: 20px;
+  background-color: var(--color-blue-accent);
+  height: 42px;
+  width: 42px;
+  border-radius: 21px;
+  transition: width 0.4s ease;
+  display: flex;
+  align-items: center;
+  column-gap: 8px;
+  box-sizing: border-box;
+  padding-left: 12px;
+  overflow: hidden;
+}
+.lang-settings-selected {
+  position: absolute;
+  right: 0;
+  width: 42px;
+}
+.lang-settings:hover {
+  width: 116px;
+}
+.lang-settings button {
+  border: none;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  padding: 0;
+  transition: scale 0.3s ease;
+}
+.lang-settings button:hover {
+  cursor: pointer;
+  scale: 1.1;
+}
+
+.greeting {
+  color: var(--color-blue-accent);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 8px;
+  padding-inline: 40px;
+}
+.greeting-welcome {
+  font-family: var(--font-family-base);
+  font-size: 2.3rem;
+  font-weight: 400;
+}
+.greeting-message {
+  font-family: var(--font-family-accent);
+  font-weight: 900;
+  font-size: 1.5rem;
+}
+
+.contacts {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 30px;
 }
