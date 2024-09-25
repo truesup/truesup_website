@@ -83,6 +83,9 @@ body {
   --color-light-accent: #e2e8e7;
 
   --border-radius: 20px;
+
+  --shadow-logo: 3px 3px 10px rgba(0, 0, 0, 0.5);
+  --shadow-grid: 3px 5px 20px rgba(0, 0, 0, 0.7);
 }
 
 .visually-hidden {
@@ -146,6 +149,16 @@ header,
 .cv,
 .contacts {
   border-radius: var(--border-radius);
+  box-shadow: var(--shadow-grid);
+  transition: scale 0.2s ease;
+}
+.greeting:hover,
+.photo:hover,
+.skills:hover,
+.portfolio:hover,
+.cv:hover,
+.contacts:hover {
+  scale: 1.015;
 }
 
 header {
@@ -155,13 +168,18 @@ header {
   padding-inline: 20px;
   position: relative;
 }
+.logo {
+  border: none;
+  border-radius: 50%;
+  box-shadow: var(--shadow-logo);
+}
 .lang-settings {
   position: absolute;
   right: 20px;
   background-color: var(--color-blue-accent);
-  height: 42px;
-  width: 42px;
-  border-radius: 21px;
+  height: 36px;
+  width: 36px;
+  border-radius: 18px;
   transition: width 0.4s ease;
   display: flex;
   align-items: center;
@@ -169,14 +187,15 @@ header {
   box-sizing: border-box;
   padding-left: 12px;
   overflow: hidden;
+  box-shadow: var(--shadow-logo);
 }
 .lang-settings-selected {
   position: absolute;
   right: 0;
-  width: 42px;
+  width: 36px;
 }
 .lang-settings:hover {
-  width: 116px;
+  width: 110px;
 }
 .lang-settings button {
   border: none;
@@ -208,6 +227,67 @@ header {
   font-family: var(--font-family-accent);
   font-weight: 900;
   font-size: 1.5rem;
+}
+
+.photo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-blue-substrate);
+}
+
+.skills {
+  font-family: var(--font-family-accent);
+  color: var(--color-blue-accent);
+  padding: 20px;
+}
+.skills-hard p:first-child,
+.skills-soft p:first-child {
+  font-size: 30px;
+  font-weight: 900;
+}
+.skills-hard p:not(:first-child),
+.skills-soft p:not(:first-child) {
+  display: none;
+}
+
+.portfolio {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-blue-accent);
+}
+
+.cv {
+  display: flex;
+  flex-direction: column;
+}
+.cv-message {
+  padding: 15px 80px 0;
+  font-size: 36px;
+}
+.cv hr {
+  margin-top: 0;
+  margin-bottom: 15px;
+  outline: none;
+  border: 1px solid var(--color-blue-substrate);
+  width: 77%;
+  border-radius: 2px;
+}
+.cv-en,
+.cv-ru {
+  font-family: var(--font-family-accent);
+  font-size: 24px;
+  padding-inline: 80px;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.cv-en p,
+.cv-ru p {
+  font-weight: 900;
+  margin-block: 15px;
 }
 
 .contacts {
