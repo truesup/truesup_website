@@ -249,6 +249,7 @@ header {
 .skills-hard-header,
 .skills-soft-header {
   font-size: 34px;
+  user-select: none;
 }
 .skills-hard-button,
 .skills-soft-button {
