@@ -87,6 +87,8 @@ body {
 
   --shadow-logo: 3px 3px 10px rgba(0, 0, 0, 0.5);
   --shadow-grid: 3px 5px 20px rgba(0, 0, 0, 0.7);
+  --shadow-positive-contacts: 3px 3px 12px rgba(0, 0, 0, 0.5);
+  --shadow-negative-contacts: -3px -3px 12px rgba(249, 249, 255, 0.2);
 }
 
 .visually-hidden {
@@ -347,5 +349,20 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  column-gap: 30px;
+  column-gap: 10px;
+}
+.contact-wrapper {
+  width: 55px;
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: var(--color-blue-main);
+  transition: box-shadow 0.4s ease;
+}
+.contact-wrapper:hover {
+  cursor: pointer;
+  box-shadow: var(--shadow-positive-contacts);
+  box-shadow: var(--shadow-negative-contacts);
 }
