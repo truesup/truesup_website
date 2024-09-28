@@ -10,10 +10,10 @@
     <header>
       <img src="./imgs/logo.svg" alt="logo" width="50" class="logo" />
       <div class="lang-settings">
-        <button class="lang-settings-eng">
+        <button class="lang-settings-eng" type="button">
           <img src="./imgs/lang-en.svg" alt="" width="24" />
         </button>
-        <button class="lang-settings-ru">
+        <button class="lang-settings-ru" type="button">
           <img src="./imgs/lang-ru.svg" alt="" width="24" />
         </button>
         <!-- <img src="./imgs/lang-ru.svg" alt="ru" class="lang-settings-selected" /> -->
@@ -30,43 +30,67 @@
         My name is Pavel and I'm a passionate Frontend Developer. I'm thrilled
         that you've taken the time to check out my website. Feel free to explore
         this website and check out my portfolio — you'll find examples of my
-        work and projects there.
+        projects.
       </p>
     </section>
     <section class="photo">photo</section>
     <section class="skills">
       <div class="skills-hard">
-        <p>Hard skills</p>
-        <p>HTML (HTML5)</p>
-        <p>CSS (CSS3), Animations</p>
-        <p>JavaScript (ES6+, OOP)</p>
-        <p>React, React Router</p>
-        <p>Webpack, Vite</p>
-        <p>Rest Api</p>
-        <p>Git (GitHub)</p>
-        <p>Figma</p>
-        <p>Agile, Waterfall, SCRUM</p>
-        <p>Competent written and oral speech</p>
-        <p>English level - B1</p>
+        <div class="skills-hard-top">
+          <p class="skills-hard-header">Hard skills</p>
+          <button
+            id="skills-hard-arrow"
+            class="skills-hard-button"
+            type="button"
+          >
+            <img src="./imgs/button-arrow.svg" alt="" width="30" />
+          </button>
+        </div>
+        <div class="skills-hard-divider">
+          <ul class="skills-hard-list visually-hidden">
+            <li class="skills-hard-element">HTML (HTML5)</li>
+            <li class="skills-hard-element">CSS (CSS3), Animations</li>
+            <li class="skills-hard-element">JavaScript (ES6+, OOP)</li>
+            <li class="skills-hard-element">React, React Router</li>
+            <li class="skills-hard-element">Webpack, Vite</li>
+            <li class="skills-hard-element">Rest Api</li>
+            <li class="skills-hard-element">Git (GitHub)</li>
+            <li class="skills-hard-element">Figma</li>
+            <li class="skills-hard-element">Agile, Waterfall, SCRUM</li>
+            <li class="skills-hard-element">English level - B1</li>
+          </ul>
+        </div>
       </div>
+
       <div class="skills-soft">
-        <p>Soft skills</p>
-        <p>
-          I know how to work in a team, I have experience in communication with
-          designers, managers and other developers
-        </p>
-        <p>I am responsible about deadlines</p>
-        <p>I am attentive to the details of the terms of reference</p>
-        <p>I have time management skills</p>
-        <p>
-          I welcome constructive criticism and am always happy to find new
-          points of professional and personal growth
-        </p>
-        <p>I know how to solve conflict situations</p>
-        <p>
-          I am motivated to improve my skills, constantly studying new
-          technologies in my field of activity
-        </p>
+        <div class="skills-soft-top">
+          <p class="skills-soft-header">Soft skills</p>
+          <button
+            id="skills-soft-arrow"
+            class="skills-soft-button"
+            type="button"
+          >
+            <img src="./imgs/button-arrow.svg" alt="" width="30" />
+          </button>
+        </div>
+        <div class="skills-soft-divider">
+          <ul class="skills-soft-list visually-hidden">
+            <li class="skills-soft-element">I know how to work in a team</li>
+            <li class="skills-soft-element">
+              I am responsible about deadlines
+            </li>
+            <li class="skills-soft-element">I have time management skills</li>
+            <li class="skills-soft-element">
+              I am attentive to the details of the terms of reference
+            </li>
+            <li class="skills-soft-element">
+              I know how to solve conflict situations
+            </li>
+            <li class="skills-soft-element">
+              I am motivated to improve my skills, studying new technologies
+            </li>
+          </ul>
+        </div>
       </div>
     </section>
     <section class="portfolio">portfolio</section>
@@ -85,7 +109,10 @@
     <section class="contacts">
       <img src="./imgs/github.svg" alt="github" width="34" />
       <img src="./imgs/telegram.svg" alt="telegram" width="34" />
+      <img src="./imgs/linkedin-svgrepo-com.svg" alt="" width="38" />
+      <img src="./imgs/vk.svg" alt="" width="40" />
       <img src="./imgs/email.svg" alt="mail" width="34" />
     </section>
+    <script src="./script.js"></script>
   </body>
 </html>
