@@ -293,7 +293,7 @@ header {
   margin-bottom: 10px;
 }
 .skills-hard-element::before {
-  content: url('./imgs/skills-list-rect.svg');
+  content: url('./imgs/icons/skills-list-rect.svg');
   position: absolute;
   left: -20px;
   bottom: 4px;
@@ -302,7 +302,7 @@ header {
   position: relative;
 }
 .skills-soft-element::before {
-  content: url('./imgs/skills-list-rect.svg');
+  content: url('./imgs/icons/skills-list-rect.svg');
   position: absolute;
   left: -20px;
   top: -4px;
