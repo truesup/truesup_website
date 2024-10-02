@@ -9,6 +9,9 @@
   <body>
     <header>
       <img src="./imgs/icons/logo.svg" alt="logo" width="50" class="logo" />
+      <h1 class="visually-hidden">
+        Personal Website of Pavel Merekin - Frontend developer.
+      </h1>
       <div class="lang-settings">
         <button class="lang-settings-eng" type="button">
           <img src="./imgs/icons/lang-en.svg" alt="" width="24" />
@@ -25,12 +28,13 @@
       </div>
     </header>
     <section class="greeting">
-      <h1 class="greeting-welcome">Glad to see you here!</h1>
+      <h2 class="greeting-welcome">Welcome to my website!</h2>
       <p class="greeting-message">
-        My name is Pavel and I'm a passionate Frontend Developer. I'm thrilled
-        that you've taken the time to check out my website. Feel free to explore
-        this website and check out my portfolio — you'll find examples of my
-        projects.
+        I built it to showcase my frontend development skills. This site was
+        created using only HTML, CSS, and JavaScript, serving as an initial
+        version of my projects. Feel free to explore my portfolio — I hope you
+        enjoy it, but keep in mind that I'm still at the beginning of my
+        journey.
       </p>
     </section>
     <section class="photo">photo</section>
@@ -99,51 +103,139 @@
           <img src="./imgs/icons/slide-prev.svg" alt="" width="30" />
         </button>
         <div class="slides">
-          <img
-            src="./imgs/portfolio/rps-screen.jpg"
-            alt="rock-paper-scissors screenshot"
-            class="slide"
-          />
-          <img
-            src="./imgs/portfolio/card-game-screen.jpg"
-            alt="memory card game screenshot"
-            class="slide"
-          />
-          <img
-            src="./imgs/portfolio/color-flipper-screen.jpg"
-            alt="color flipper screenshot"
-            class="slide"
-          />
-          <img
-            src="./imgs/portfolio/random-image-screen.jpg"
-            alt="random image gallery screenshot"
-            class="slide"
-          />
-          <img
-            src="./imgs/portfolio/clock-screen.jpg"
-            alt="digital clock screenshot"
-            class="slide"
-          />
-          <img
-            src="./imgs/portfolio/snake-screen.jpg"
-            alt="snake game screenshot"
-            class="slide"
-          />
-          <img
-            src="./imgs/portfolio/timer-screen.jpg"
-            alt="timer screenshot"
-            class="slide"
-          />
-          <img
-            src="./imgs/portfolio/ttt-screen.jpg"
-            alt="tic-tac-toe screenshot"
-            class="slide"
-          />
-          <img
-            src="./imgs/portfolio/todo-screen.jpg"
-            alt="to do list screenshot"
-            class="slide"
-          />
+          <div
+            class="slide-wrapper"
+            onclick="openModal('Rock Paper Scissors Game', './imgs/portfolio/rps.gif', 
+          'https://github.com/truesup/RockPaperScissors'
+        )"
+          >
+            <img
+              src="./imgs/portfolio/rps-screen.jpg"
+              alt="rock-paper-scissors screenshot"
+              class="slide"
+            />
+            <div class="slide-title">Rock Paper Scissors</div>
+          </div>
+
+          <div
+            class="slide-wrapper"
+            onclick="openModal('Memory Card Game',
+          './imgs/portfolio/card-game.gif',
+          'https://github.com/truesup/MemoryCardGame'
+        )"
+          >
+            <img
+              src="./imgs/portfolio/card-game-screen.jpg"
+              alt="memory card game screenshot"
+              class="slide"
+            />
+            <div class="slide-title">Memory Card Game</div>
+          </div>
+
+          <div
+            class="slide-wrapper"
+            onclick="openModal('Color flipper',
+          './imgs/portfolio/color-flipper.gif',
+          'https://github.com/truesup/ColorFlipper'
+        )"
+          >
+            <img
+              src="./imgs/portfolio/color-flipper-screen.jpg"
+              alt="color flipper screenshot"
+              class="slide"
+            />
+            <div class="slide-title">Color Flipper</div>
+          </div>
+
+          <div
+            class="slide-wrapper"
+            onclick="openModal('Random Image Gallery',
+          './imgs/portfolio/image-gallery.gif',
+          'https://github.com/truesup/RandomImageGallery'
+        )"
+          >
+            <img
+              src="./imgs/portfolio/random-image-screen.jpg"
+              alt="random image gallery screenshot"
+              class="slide"
+            />
+            <div class="slide-title">Random Image Gallery</div>
+          </div>
+
+          <div
+            class="slide-wrapper"
+            onclick="openModal('Digital clock',
+          './imgs/portfolio/clock.gif',
+          'https://github.com/truesup/DigitalClock'
+        )"
+          >
+            <img
+              src="./imgs/portfolio/clock-screen.jpg"
+              alt="digital clock screenshot"
+              class="slide"
+            />
+            <div class="slide-title">Digital clock</div>
+          </div>
+
+          <div
+            class="slide-wrapper"
+            onclick="openModal('The Snake Game',
+          './imgs/portfolio/snake.gif',
+          'https://github.com/truesup/SnakeGame'
+        )"
+          >
+            <img
+              src="./imgs/portfolio/snake-screen.jpg"
+              alt="snake game screenshot"
+              class="slide"
+            />
+            <div class="slide-title">The Snake Game</div>
+          </div>
+
+          <div
+            class="slide-wrapper"
+            onclick="openModal('Timer',
+          './imgs/portfolio/timer.gif',
+          'https://github.com/truesup/AnimatedTimer'
+        )"
+          >
+            <img
+              src="./imgs/portfolio/timer-screen.jpg"
+              alt="timer screenshot"
+              class="slide"
+            />
+            <div class="slide-title">Timer</div>
+          </div>
+
+          <div
+            class="slide-wrapper"
+            onclick="openModal('Tic Tac Toe',
+          './imgs/portfolio/ttt.gif',
+          'https://github.com/truesup/TicTacToe_Minimax'
+        )"
+          >
+            <img
+              src="./imgs/portfolio/ttt-screen.jpg"
+              alt="tic-tac-toe screenshot"
+              class="slide"
+            />
+            <div class="slide-title">Tic Tac Toe</div>
+          </div>
+
+          <div
+            class="slide-wrapper"
+            onclick="openModal('To-do App',
+          './imgs/portfolio/todo.gif',
+          'https://github.com/truesup/ToDoList'
+        )"
+          >
+            <img
+              src="./imgs/portfolio/todo-screen.jpg"
+              alt="to do list screenshot"
+              class="slide"
+            />
+            <div class="slide-title">To-do App</div>
+          </div>
         </div>
         <button class="next" onclick="nextSlide()">
           <img src="./imgs/icons/slide-next.svg" alt="" />
@@ -195,6 +287,17 @@
         </a>
       </div>
     </section>
+
+    <!-- modal window -->
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <p id="modal-text"></p>
+        <img id="modal-gif" src="" alt="modal gif" />
+        <a id="modal-url" href="" target="_blank">Explore code on Github</a>
+      </div>
+    </div>
+
     <script src="./script.js"></script>
   </body>
 </html>

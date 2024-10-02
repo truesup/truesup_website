@@ -215,14 +215,16 @@ header {
 
 .greeting {
   color: var(--color-blue-accent);
-  padding: 90px 40px;
+  padding: 50px 40px;
 }
 .greeting-welcome {
   font-size: 40px;
+  margin-bottom: 10px;
 }
 .greeting-message {
   font-family: var(--font-family-accent);
   font-size: 26px;
+  text-align: justify;
 }
 
 .photo {
@@ -324,9 +326,37 @@ header {
 }
 .slide.displaySlide {
   display: block;
-  animation-name: fade;
-  animation-duration: 1.2s;
 }
+.slide-wrapper {
+  position: relative;
+  cursor: pointer;
+}
+.slide {
+  transition: opacity 0.1s ease;
+}
+.slide-wrapper:hover .slide {
+  opacity: 0.1;
+}
+.slide-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  width: 100%;
+}
+.slide-wrapper:hover .slide-title {
+  opacity: 1;
+  pointer-events: auto;
+}
+/* .slide-title:hover {
+  text-decoration: underline;
+} */
 .prev,
 .next {
   padding: 0;
@@ -338,14 +368,6 @@ header {
 .prev:hover,
 .next:hover {
   scale: 1.03;
-}
-@keyframes fade {
-  from {
-    opacity: 0.5;
-  }
-  to {
-    opacity: 1;
-  }
 }
 
 .cv {
@@ -399,4 +421,56 @@ header {
   cursor: pointer;
   box-shadow: var(--shadow-positive-contacts);
   box-shadow: var(--shadow-negative-contacts);
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.modal-content {
+  position: relative;
+  margin: 5% auto;
+  padding: 20px;
+  background-color: var(--color-blue-accent);
+  width: 80%;
+  max-width: 750px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#modal-text {
+  font-family: var(--font-family-base);
+  color: var(--color-blue-substrate);
+  font-size: 24px;
+}
+#modal-gif {
+  margin-bottom: 20px;
+}
+#modal-url {
+  font-family: var(--font-family-accent);
+  color: var(--color-blue-substrate);
+  font-size: 18px;
+  margin-block: 20px;
+}
+#modal-url:hover {
+  color: var(--color-blue-main);
+}
+.close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 30px;
+  cursor: pointer;
+  color: black;
+}
+.close:hover {
+  color: red;
 }

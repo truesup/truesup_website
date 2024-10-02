@@ -49,7 +49,7 @@ initializeSlider();
 function initializeSlider() {
   if (slides.length > 0) {
     slides[slideIndex].classList.add('displaySlide');
-    intervalId = setInterval(nextSlide, 5000);
+    // intervalId = setInterval(nextSlide, 5000);
   }
 }
 
@@ -67,15 +67,31 @@ function showSlide(index) {
 }
 
 function prevSlide() {
-  clearInterval(intervalId);
+  // clearInterval(intervalId);
   slideIndex--;
   showSlide(slideIndex);
-  intervalId = setInterval(nextSlide, 5000);
+  // intervalId = setInterval(nextSlide, 5000);
 }
 
 function nextSlide() {
-  clearInterval(intervalId);
+  // clearInterval(intervalId);
   slideIndex++;
   showSlide(slideIndex);
-  intervalId = setInterval(nextSlide, 5000);
+  // intervalId = setInterval(nextSlide, 5000);
+}
+
+const modal = document.getElementById('modal');
+const modalText = document.getElementById('modal-text');
+const modalGif = document.getElementById('modal-gif');
+const modalUrl = document.getElementById('modal-url');
+
+function openModal(content, gifUrl, githubUrl) {
+  modal.style.display = 'block';
+  modalText.innerText = content;
+  modalGif.src = gifUrl;
+  modalUrl.href = githubUrl;
+}
+
+function closeModal() {
+  modal.style.display = 'none';
 }
