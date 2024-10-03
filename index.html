@@ -12,18 +12,32 @@
       <h1 class="visually-hidden">
         Personal Website of Pavel Merekin - Frontend developer.
       </h1>
-      <div class="lang-settings">
+      <!-- <div class="lang-settings">
         <button class="lang-settings-eng" type="button">
           <img src="./imgs/icons/lang-en.svg" alt="" width="24" />
         </button>
         <button class="lang-settings-ru" type="button">
           <img src="./imgs/icons/lang-ru.svg" alt="" width="24" />
         </button>
-        <!-- <img src="./imgs/lang-ru.svg" alt="ru" class="lang-settings-selected" /> -->
         <img
           src="./imgs/icons/lang-en.svg"
           alt="eng"
           class="lang-settings-selected"
+        />
+      </div> -->
+
+      <div class="color-settings">
+        <button class="color-settings-blue" type="button"></button>
+
+        <button class="color-settings-light" type="button"></button>
+
+        <button class="color-settings-dark" type="button"></button>
+
+        <img
+          src="./imgs/icons/palette.svg"
+          alt="palette"
+          class="color-settings-selected"
+          width="40"
         />
       </div>
     </header>
@@ -100,7 +114,11 @@
     <section class="portfolio">
       <div class="slider">
         <button class="prev" onclick="prevSlide()">
-          <img src="./imgs/icons/slide-prev.svg" alt="" width="30" />
+          <img
+            src="./imgs/icons/slide-prev.svg"
+            alt="previous button"
+            width="30"
+          />
         </button>
         <div class="slides">
           <div
@@ -209,7 +227,7 @@
 
           <div
             class="slide-wrapper"
-            onclick="openModal('Tic Tac Toe',
+            onclick="openModal('Tic Tac Toe (minimax)',
           './imgs/portfolio/ttt.gif',
           'https://github.com/truesup/TicTacToe_Minimax'
         )"
@@ -238,7 +256,7 @@
           </div>
         </div>
         <button class="next" onclick="nextSlide()">
-          <img src="./imgs/icons/slide-next.svg" alt="" />
+          <img src="./imgs/icons/slide-next.svg" alt="next button" />
         </button>
       </div>
     </section>

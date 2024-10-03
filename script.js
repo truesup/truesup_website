@@ -1,3 +1,4 @@
+// skills
 const hardSkillsTop = document.querySelector('.skills-hard-top');
 const hardSkillsBtn = document.getElementById('skills-hard-arrow');
 const hardSkillsDivider = document.querySelector('.skills-hard-divider');
@@ -41,6 +42,7 @@ softSkillsTop.addEventListener('click', () =>
   toggleSkills(softSkillsBtn, softSkillsDivider, softSkillsList, '380px')
 );
 
+// slider
 const slides = document.querySelectorAll('.slides img');
 let slideIndex = 0;
 let intervalId = null;
@@ -49,7 +51,6 @@ initializeSlider();
 function initializeSlider() {
   if (slides.length > 0) {
     slides[slideIndex].classList.add('displaySlide');
-    // intervalId = setInterval(nextSlide, 5000);
   }
 }
 
@@ -67,19 +68,16 @@ function showSlide(index) {
 }
 
 function prevSlide() {
-  // clearInterval(intervalId);
   slideIndex--;
   showSlide(slideIndex);
-  // intervalId = setInterval(nextSlide, 5000);
 }
 
 function nextSlide() {
-  // clearInterval(intervalId);
   slideIndex++;
   showSlide(slideIndex);
-  // intervalId = setInterval(nextSlide, 5000);
 }
 
+// modal window
 const modal = document.getElementById('modal');
 const modalText = document.getElementById('modal-text');
 const modalGif = document.getElementById('modal-gif');
@@ -95,3 +93,5 @@ function openModal(content, gifUrl, githubUrl) {
 function closeModal() {
   modal.style.display = 'none';
 }
+
+// color change

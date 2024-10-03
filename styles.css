@@ -176,7 +176,50 @@ header {
   border-radius: 50%;
   box-shadow: var(--shadow-logo);
 }
-.lang-settings {
+.color-settings {
+  position: absolute;
+  right: 20px;
+  background-color: var(--color-white);
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+  overflow: hidden;
+  box-shadow: var(--shadow-logo);
+  transition: width 0.4s ease;
+}
+.color-settings:hover {
+  width: 126px;
+  padding-left: 14px;
+}
+.color-settings-selected {
+  position: absolute;
+  right: 0;
+}
+.color-settings button {
+  padding: 0;
+  width: 20px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 1px solid var(--color-black);
+  cursor: pointer;
+  transition: scale 0.3s ease;
+}
+.color-settings button:hover {
+  scale: 1.1;
+}
+.color-settings-blue {
+  background-color: var(--color-blue-substrate);
+}
+.color-settings-light {
+  background-color: var(--color-light-substrate);
+}
+.color-settings-dark {
+  background-color: var(--color-dark-substrate);
+}
+/* .lang-settings {
   position: absolute;
   right: 20px;
   background-color: var(--color-blue-accent);
@@ -196,8 +239,8 @@ header {
   position: absolute;
   right: 0;
   width: 36px;
-}
-.lang-settings:hover {
+} */
+/* .lang-settings:hover {
   width: 110px;
 }
 .lang-settings button {
@@ -211,7 +254,7 @@ header {
 .lang-settings button:hover {
   cursor: pointer;
   scale: 1.1;
-}
+} */
 
 .greeting {
   color: var(--color-blue-accent);
