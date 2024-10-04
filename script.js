@@ -93,30 +93,3 @@ function openModal(content, gifUrl, githubUrl) {
 function closeModal() {
   modal.style.display = 'none';
 }
-
-// color change
-const root = document.documentElement;
-
-root.style.setProperty('--color-substrate', '#213140');
-root.style.setProperty('--color-main', '#73a2bf');
-root.style.setProperty('--color-accent', '#f9f9ff');
-
-const btnBlue = document.querySelector('.color-settings-blue');
-const btnLight = document.querySelector('.color-settings-light');
-const btnDark = document.querySelector('.color-settings-dark');
-
-function changeColorScheme(substrate, main, accent) {
-  root.style.setProperty('--color-substrate', substrate);
-  root.style.setProperty('--color-main', main);
-  root.style.setProperty('--color-accent', accent);
-}
-
-btnBlue.addEventListener('click', () => {
-  changeColorScheme('#213140', '#73a2bf', '#f9f9ff');
-});
-btnLight.addEventListener('click', () => {
-  changeColorScheme('#fffafa', '#e8e8e8', '#e2e8e7');
-});
-btnDark.addEventListener('click', () => {
-  changeColorScheme('#1a1e26', '#6e7371', '#a1a69c');
-});
