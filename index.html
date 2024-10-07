@@ -13,10 +13,18 @@
         Personal Website of Pavel Merekin - Frontend developer.
       </h1>
       <div class="lang-settings">
-        <button class="lang-settings-eng" type="button">
+        <button
+          class="lang-settings-eng"
+          type="button"
+          onclick="switchLanguage('en')"
+        >
           <img src="./imgs/icons/lang-en.svg" alt="" width="24" />
         </button>
-        <button class="lang-settings-ru" type="button">
+        <button
+          class="lang-settings-ru"
+          type="button"
+          onclick="switchLanguage('ru')"
+        >
           <img src="./imgs/icons/lang-ru.svg" alt="" width="24" />
         </button>
         <img
@@ -27,8 +35,10 @@
       </div>
     </header>
     <section class="greeting">
-      <h2 class="greeting-welcome">Welcome to my website!</h2>
-      <p class="greeting-message">
+      <h2 class="greeting-welcome" data-text-key="greetingWelcome">
+        Welcome to my website!
+      </h2>
+      <p class="greeting-message" data-text-key="greetingMessage">
         I built it to showcase my frontend development skills. This site was
         created using only HTML, CSS, and JavaScript, serving as an initial
         version of my projects. Feel free to explore my portfolio — I hope you
@@ -40,7 +50,9 @@
     <section class="skills">
       <div class="skills-hard">
         <div class="skills-hard-top">
-          <p class="skills-hard-header">Hard skills</p>
+          <p class="skills-hard-header" data-text-key="hardSkills">
+            Hard skills
+          </p>
           <button
             id="skills-hard-arrow"
             class="skills-hard-button"
@@ -67,7 +79,9 @@
 
       <div class="skills-soft">
         <div class="skills-soft-top">
-          <p class="skills-soft-header">Soft skills</p>
+          <p class="skills-soft-header" data-text-key="softSkills">
+            Soft skills
+          </p>
           <button
             id="skills-soft-arrow"
             class="skills-soft-button"
