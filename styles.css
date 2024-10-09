@@ -207,7 +207,7 @@ header {
 
 .greeting {
   color: var(--color-blue-accent);
-  padding: 50px 40px;
+  padding: 35px 25px;
 }
 .greeting-welcome {
   font-size: 40px;
@@ -221,9 +221,15 @@ header {
 
 .photo {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  /* gap: 10px; */
   color: var(--color-blue-substrate);
+}
+.photo p {
+  text-align: center;
+  padding-inline: 20px;
 }
 
 .skills {

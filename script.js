@@ -35,6 +35,8 @@ function toggleSkills(button, divider, list, height) {
   list.classList.toggle('visually-hidden', isOpen);
 }
 
+toggleSkills(hardSkillsBtn, hardSkillsDivider, hardSkillsList, '390px');
+
 hardSkillsTop.addEventListener('click', () =>
   toggleSkills(hardSkillsBtn, hardSkillsDivider, hardSkillsList, '390px')
 );
@@ -92,31 +94,4 @@ function openModal(content, gifUrl, githubUrl) {
 
 function closeModal() {
   modal.style.display = 'none';
-}
-
-// language settings
-const textElements = document.querySelectorAll('[data-text-key]');
-
-const texts = {
-  en: {
-    greetingWelcome: 'Welcome to my website!',
-    greetingMessage:
-      'I built it to showcase my frontend development skills. This site was created using only HTML, CSS, and JavaScript, serving as an initial version of my projects. Feel free to explore my portfolio — I hope you enjoy it, but keep in mind that I am still at the beginning of my journey.',
-    hardSkills: 'Hard skills',
-    softSkills: 'Soft skills',
-  },
-  ru: {
-    greetingWelcome: 'Привет!',
-    greetingMessage:
-      'Я создал его, чтобы продемонстрировать свои навыки фронтенд-разработки. Этот сайт был создан с использованием только HTML, CSS и JavaScript и служит в качестве начальной версии моих проектов. Не стесняйтесь изучать мое портфолио - надеюсь, оно вам понравится, но имейте в виду, что я все еще в начале пути.',
-    hardSkills: 'Hard навыки',
-    softSkills: 'Soft навыки',
-  },
-};
-
-function switchLanguage(language) {
-  textElements.forEach((element) => {
-    const key = element.getAttribute('data-text-key');
-    element.innerText = texts[language][key];
-  });
 }
