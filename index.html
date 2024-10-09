@@ -7,290 +7,299 @@
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <header>
-      <img src="./imgs/icons/logo.svg" alt="logo" width="50" class="logo" />
-      <h1 class="visually-hidden">
-        Personal Website of Pavel Merekin - Frontend developer.
-      </h1>
-    </header>
-    <section class="greeting">
-      <h2 class="greeting-welcome">Welcome to my website!</h2>
-      <p class="greeting-message">
-        I created it to showcase my frontend development skills. This site was
-        created using only HTML, CSS and JavaScript, without using any libraries
-        or frameworks to show you that I can do all the work without them. Feel
-        free to explore my portfolio - I hope you enjoy it, but keep in mind
-        that I'm still at the beginning of my journey.
-      </p>
-    </section>
-    <section class="photo">
-      <img src="./imgs/Ghost.png" alt="profile photo" width="300" />
-      <p>
-        This emoji is here for a reason, it will be removed with a real photo of
-        myself soon
-      </p>
-    </section>
-    <section class="skills">
-      <div class="skills-hard">
-        <div class="skills-hard-top">
-          <p class="skills-hard-header">Hard skills</p>
-          <button
-            id="skills-hard-arrow"
-            class="skills-hard-button"
-            type="button"
-          >
-            <img src="./imgs/icons/button-arrow.svg" alt="" width="30" />
-          </button>
+    <div class="site-wrapper">
+      <header>
+        <img src="./imgs/icons/logo.svg" alt="logo" width="50" class="logo" />
+        <h1 class="visually-hidden">
+          Personal Website of Pavel Merekin - Frontend developer.
+        </h1>
+      </header>
+      <section class="greeting">
+        <h2 class="greeting-welcome">Welcome to my website!</h2>
+        <p class="greeting-message">
+          I created it to showcase my frontend development skills. This site was
+          created using only HTML, CSS and JavaScript, without using any
+          libraries or frameworks to show you that I can do all the work without
+          them. Feel free to explore my portfolio - I hope you enjoy it, but
+          keep in mind that I'm still at the beginning of my journey.
+        </p>
+      </section>
+      <section class="photo">
+        <img src="./imgs/Ghost.png" alt="profile photo" width="300" />
+        <p>
+          This emoji is here for a reason, it will be removed with a real photo
+          of myself soon
+        </p>
+      </section>
+      <section class="skills">
+        <div class="skills-hard">
+          <div class="skills-hard-top">
+            <p class="skills-hard-header">Hard skills</p>
+            <button
+              id="skills-hard-arrow"
+              class="skills-hard-button"
+              type="button"
+            >
+              <img src="./imgs/icons/button-arrow.svg" alt="" width="30" />
+            </button>
+          </div>
+          <div class="skills-hard-divider">
+            <ul class="skills-hard-list">
+              <li class="skills-hard-element">HTML (HTML5)</li>
+              <li class="skills-hard-element">CSS (CSS3), Animations</li>
+              <li class="skills-hard-element">JavaScript (ES6+, OOP)</li>
+              <li class="skills-hard-element">React, React Router</li>
+              <li class="skills-hard-element">Webpack, Vite</li>
+              <li class="skills-hard-element">Rest Api</li>
+              <li class="skills-hard-element">Git (GitHub)</li>
+              <li class="skills-hard-element">Figma</li>
+              <li class="skills-hard-element">Agile, Waterfall, SCRUM</li>
+              <li class="skills-hard-element">English level - B1</li>
+            </ul>
+          </div>
         </div>
-        <div class="skills-hard-divider">
-          <ul class="skills-hard-list">
-            <li class="skills-hard-element">HTML (HTML5)</li>
-            <li class="skills-hard-element">CSS (CSS3), Animations</li>
-            <li class="skills-hard-element">JavaScript (ES6+, OOP)</li>
-            <li class="skills-hard-element">React, React Router</li>
-            <li class="skills-hard-element">Webpack, Vite</li>
-            <li class="skills-hard-element">Rest Api</li>
-            <li class="skills-hard-element">Git (GitHub)</li>
-            <li class="skills-hard-element">Figma</li>
-            <li class="skills-hard-element">Agile, Waterfall, SCRUM</li>
-            <li class="skills-hard-element">English level - B1</li>
-          </ul>
-        </div>
-      </div>
 
-      <div class="skills-soft">
-        <div class="skills-soft-top">
-          <p class="skills-soft-header">Soft skills</p>
-          <button
-            id="skills-soft-arrow"
-            class="skills-soft-button"
-            type="button"
-          >
-            <img src="./imgs/icons/button-arrow.svg" alt="" width="30" />
+        <div class="skills-soft">
+          <div class="skills-soft-top">
+            <p class="skills-soft-header">Soft skills</p>
+            <button
+              id="skills-soft-arrow"
+              class="skills-soft-button"
+              type="button"
+            >
+              <img src="./imgs/icons/button-arrow.svg" alt="" width="30" />
+            </button>
+          </div>
+          <div class="skills-soft-divider">
+            <ul class="skills-soft-list">
+              <li class="skills-soft-element">I know how to work in a team</li>
+              <li class="skills-soft-element">
+                I am responsible about deadlines
+              </li>
+              <li class="skills-soft-element">I have time management skills</li>
+              <li class="skills-soft-element">
+                I am attentive to the details of the terms of reference
+              </li>
+              <li class="skills-soft-element">
+                I know how to solve conflict situations
+              </li>
+              <li class="skills-soft-element">
+                I am motivated to improve my skills, studying new technologies
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="portfolio">
+        <div class="slider">
+          <button class="prev" onclick="prevSlide()">
+            <img
+              src="./imgs/icons/slide-prev.svg"
+              alt="previous button"
+              width="30"
+            />
           </button>
-        </div>
-        <div class="skills-soft-divider">
-          <ul class="skills-soft-list">
-            <li class="skills-soft-element">I know how to work in a team</li>
-            <li class="skills-soft-element">
-              I am responsible about deadlines
-            </li>
-            <li class="skills-soft-element">I have time management skills</li>
-            <li class="skills-soft-element">
-              I am attentive to the details of the terms of reference
-            </li>
-            <li class="skills-soft-element">
-              I know how to solve conflict situations
-            </li>
-            <li class="skills-soft-element">
-              I am motivated to improve my skills, studying new technologies
-            </li>
-          </ul>
-        </div>
-      </div>
-    </section>
-    <section class="portfolio">
-      <div class="slider">
-        <button class="prev" onclick="prevSlide()">
-          <img
-            src="./imgs/icons/slide-prev.svg"
-            alt="previous button"
-            width="30"
-          />
-        </button>
-        <div class="slides">
-          <div
-            class="slide-wrapper"
-            onclick="openModal('Rock Paper Scissors Game', './imgs/portfolio/rps.gif', 
+          <div class="slides">
+            <div
+              class="slide-wrapper"
+              onclick="openModal('Rock Paper Scissors Game', './imgs/portfolio/rps.gif', 
           'https://github.com/truesup/RockPaperScissors'
         )"
-          >
-            <img
-              src="./imgs/portfolio/rps-screen.jpg"
-              alt="rock-paper-scissors screenshot"
-              class="slide"
-            />
-            <div class="slide-title">Rock Paper Scissors</div>
-          </div>
+            >
+              <img
+                src="./imgs/portfolio/rps-screen.jpg"
+                alt="rock-paper-scissors screenshot"
+                class="slide"
+              />
+              <div class="slide-title">Rock Paper Scissors</div>
+            </div>
 
-          <div
-            class="slide-wrapper"
-            onclick="openModal('Memory Card Game',
+            <div
+              class="slide-wrapper"
+              onclick="openModal('Memory Card Game',
           './imgs/portfolio/card-game.gif',
           'https://github.com/truesup/MemoryCardGame'
         )"
-          >
-            <img
-              src="./imgs/portfolio/card-game-screen.jpg"
-              alt="memory card game screenshot"
-              class="slide"
-            />
-            <div class="slide-title">Memory Card Game</div>
-          </div>
+            >
+              <img
+                src="./imgs/portfolio/card-game-screen.jpg"
+                alt="memory card game screenshot"
+                class="slide"
+              />
+              <div class="slide-title">Memory Card Game</div>
+            </div>
 
-          <div
-            class="slide-wrapper"
-            onclick="openModal('Color flipper',
+            <div
+              class="slide-wrapper"
+              onclick="openModal('Color flipper',
           './imgs/portfolio/color-flipper.gif',
           'https://github.com/truesup/ColorFlipper'
         )"
-          >
-            <img
-              src="./imgs/portfolio/color-flipper-screen.jpg"
-              alt="color flipper screenshot"
-              class="slide"
-            />
-            <div class="slide-title">Color Flipper</div>
-          </div>
+            >
+              <img
+                src="./imgs/portfolio/color-flipper-screen.jpg"
+                alt="color flipper screenshot"
+                class="slide"
+              />
+              <div class="slide-title">Color Flipper</div>
+            </div>
 
-          <div
-            class="slide-wrapper"
-            onclick="openModal('Random Image Gallery',
+            <div
+              class="slide-wrapper"
+              onclick="openModal('Random Image Gallery',
           './imgs/portfolio/image-gallery.gif',
           'https://github.com/truesup/RandomImageGallery'
         )"
-          >
-            <img
-              src="./imgs/portfolio/random-image-screen.jpg"
-              alt="random image gallery screenshot"
-              class="slide"
-            />
-            <div class="slide-title">Random Image Gallery</div>
-          </div>
+            >
+              <img
+                src="./imgs/portfolio/random-image-screen.jpg"
+                alt="random image gallery screenshot"
+                class="slide"
+              />
+              <div class="slide-title">Random Image Gallery</div>
+            </div>
 
-          <div
-            class="slide-wrapper"
-            onclick="openModal('Digital clock',
+            <div
+              class="slide-wrapper"
+              onclick="openModal('Digital clock',
           './imgs/portfolio/clock.gif',
           'https://github.com/truesup/DigitalClock'
         )"
-          >
-            <img
-              src="./imgs/portfolio/clock-screen.jpg"
-              alt="digital clock screenshot"
-              class="slide"
-            />
-            <div class="slide-title">Digital clock</div>
-          </div>
+            >
+              <img
+                src="./imgs/portfolio/clock-screen.jpg"
+                alt="digital clock screenshot"
+                class="slide"
+              />
+              <div class="slide-title">Digital clock</div>
+            </div>
 
-          <div
-            class="slide-wrapper"
-            onclick="openModal('The Snake Game',
+            <div
+              class="slide-wrapper"
+              onclick="openModal('The Snake Game',
           './imgs/portfolio/snake.gif',
           'https://github.com/truesup/SnakeGame'
         )"
-          >
-            <img
-              src="./imgs/portfolio/snake-screen.jpg"
-              alt="snake game screenshot"
-              class="slide"
-            />
-            <div class="slide-title">The Snake Game</div>
-          </div>
+            >
+              <img
+                src="./imgs/portfolio/snake-screen.jpg"
+                alt="snake game screenshot"
+                class="slide"
+              />
+              <div class="slide-title">The Snake Game</div>
+            </div>
 
-          <div
-            class="slide-wrapper"
-            onclick="openModal('Timer',
+            <div
+              class="slide-wrapper"
+              onclick="openModal('Timer',
           './imgs/portfolio/timer.gif',
           'https://github.com/truesup/AnimatedTimer'
         )"
-          >
-            <img
-              src="./imgs/portfolio/timer-screen.jpg"
-              alt="timer screenshot"
-              class="slide"
-            />
-            <div class="slide-title">Timer</div>
-          </div>
+            >
+              <img
+                src="./imgs/portfolio/timer-screen.jpg"
+                alt="timer screenshot"
+                class="slide"
+              />
+              <div class="slide-title">Timer</div>
+            </div>
 
-          <div
-            class="slide-wrapper"
-            onclick="openModal('Tic Tac Toe (minimax)',
+            <div
+              class="slide-wrapper"
+              onclick="openModal('Tic Tac Toe (minimax)',
           './imgs/portfolio/ttt.gif',
           'https://github.com/truesup/TicTacToe_Minimax'
         )"
-          >
-            <img
-              src="./imgs/portfolio/ttt-screen.jpg"
-              alt="tic-tac-toe screenshot"
-              class="slide"
-            />
-            <div class="slide-title">Tic Tac Toe</div>
-          </div>
+            >
+              <img
+                src="./imgs/portfolio/ttt-screen.jpg"
+                alt="tic-tac-toe screenshot"
+                class="slide"
+              />
+              <div class="slide-title">Tic Tac Toe</div>
+            </div>
 
-          <div
-            class="slide-wrapper"
-            onclick="openModal('To-do App',
+            <div
+              class="slide-wrapper"
+              onclick="openModal('To-do App',
           './imgs/portfolio/todo.gif',
           'https://github.com/truesup/ToDoList'
         )"
+            >
+              <img
+                src="./imgs/portfolio/todo-screen.jpg"
+                alt="to do list screenshot"
+                class="slide"
+              />
+              <div class="slide-title">To-do App</div>
+            </div>
+          </div>
+          <button class="next" onclick="nextSlide()">
+            <img src="./imgs/icons/slide-next.svg" alt="next button" />
+          </button>
+        </div>
+      </section>
+      <section class="cv">
+        <div class="cv-en">
+          <p>Download english version of CV</p>
+          <img src="./imgs/icons/cv-en.svg" alt="" />
+        </div>
+        <hr class="cv-divider" />
+        <div class="cv-ru">
+          <p>Загрузить русскую версию резюме</p>
+          <img src="./imgs/icons/cv-ru.svg" alt="" />
+        </div>
+      </section>
+      <section class="contacts">
+        <div class="contact-wrapper" title="Github">
+          <a
+            href="https://github.com/truesup"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src="./imgs/icons/github.svg" alt="Github icon" width="36" />
+          </a>
+        </div>
+        <div class="contact-wrapper" title="Telegram">
+          <a
+            href="https://t.me/p_mrkn"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             <img
-              src="./imgs/portfolio/todo-screen.jpg"
-              alt="to do list screenshot"
-              class="slide"
+              src="./imgs/icons/telegram.svg"
+              alt="Telegram icon"
+              width="34"
             />
-            <div class="slide-title">To-do App</div>
-          </div>
+          </a>
         </div>
-        <button class="next" onclick="nextSlide()">
-          <img src="./imgs/icons/slide-next.svg" alt="next button" />
-        </button>
-      </div>
-    </section>
-    <section class="cv">
-      <p class="cv-message">Resume</p>
-      <hr />
-      <div class="cv-en">
-        <p>English version</p>
-        <img src="./imgs/icons/cv-en.svg" alt="" />
-      </div>
-      <div class="cv-ru">
-        <p>Русская версия</p>
-        <img src="./imgs/icons/cv-ru.svg" alt="" />
-      </div>
-    </section>
-    <section class="contacts">
-      <div class="contact-wrapper" title="Github">
-        <a
-          href="https://github.com/truesup"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img src="./imgs/icons/github.svg" alt="Github icon" width="36" />
-        </a>
-      </div>
-      <div class="contact-wrapper" title="Telegram">
-        <a href="https://t.me/p_mrkn" target="_blank" rel="noopener noreferrer">
-          <img src="./imgs/icons/telegram.svg" alt="Telegram icon" width="34" />
-        </a>
-      </div>
-      <div class="contact-wrapper" title="LinkedIn">
-        <img src="./imgs/icons/linkedin.svg" alt="LinkedIn icon" width="38" />
-      </div>
-      <div class="contact-wrapper" title="VK">
-        <a
-          href="https://vk.com/p.mrkn"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img src="./imgs/icons/vk.svg" alt="VK icon" width="40" />
-        </a>
-      </div>
-      <div class="contact-wrapper" title="Gmail">
-        <a href="mailto:merekin33@gmail.com">
-          <img src="./imgs/icons/email.svg" alt="Mail icon" width="34" />
-        </a>
-      </div>
-    </section>
+        <div class="contact-wrapper" title="LinkedIn">
+          <img src="./imgs/icons/linkedin.svg" alt="LinkedIn icon" width="38" />
+        </div>
+        <div class="contact-wrapper" title="VK">
+          <a
+            href="https://vk.com/p.mrkn"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src="./imgs/icons/vk.svg" alt="VK icon" width="40" />
+          </a>
+        </div>
+        <div class="contact-wrapper" title="Gmail">
+          <a href="mailto:merekin33@gmail.com">
+            <img src="./imgs/icons/email.svg" alt="Mail icon" width="34" />
+          </a>
+        </div>
+      </section>
 
-    <!-- modal window -->
-    <div id="modal" class="modal">
-      <div class="modal-content">
-        <span class="close" onclick="closeModal()">&times;</span>
-        <p id="modal-text"></p>
-        <img id="modal-gif" src="" alt="modal gif" />
-        <a id="modal-url" href="" target="_blank">Explore code on Github</a>
+      <!-- modal window -->
+      <div id="modal" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="closeModal()">&times;</span>
+          <p id="modal-text"></p>
+          <img id="modal-gif" src="" alt="modal gif" />
+          <a id="modal-url" href="" target="_blank">Explore code on Github</a>
+        </div>
       </div>
     </div>
 
