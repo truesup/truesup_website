@@ -357,7 +357,7 @@ header {
   gap: 10px;
 }
 .cv-divider {
-  margin: 10px 0 0;
+  margin: 10px 0 15px 0;
   border: none;
   height: 3px;
   border-radius: 2px;
@@ -369,10 +369,10 @@ header {
   justify-content: space-between;
 }
 .cv div p {
-  font-size: 18px;
+  font-size: 19px;
 }
 .cv div img {
-  width: 30px;
+  width: 35px;
 }
 
 .contacts {

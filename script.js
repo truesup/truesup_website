@@ -1,48 +1,82 @@
-// skills
-const hardSkillsTop = document.querySelector('.skills-hard-top');
-const hardSkillsBtn = document.getElementById('skills-hard-arrow');
-const hardSkillsDivider = document.querySelector('.skills-hard-divider');
-const hardSkillsList = document.querySelector('.skills-hard-list');
+// skillss
+const skillsData = [
+  {
+    top: document.querySelector('.skills-hard-top'),
+    btn: document.getElementById('skills-hard-arrow'),
+    divider: document.querySelector('.skills-hard-divider'),
+    list: document.querySelector('.skills-hard-list'),
+  },
+  {
+    top: document.querySelector('.skills-soft-top'),
+    btn: document.getElementById('skills-soft-arrow'),
+    divider: document.querySelector('.skills-soft-divider'),
+    list: document.querySelector('.skills-soft-list'),
+  },
+];
 
-const softSkillsTop = document.querySelector('.skills-soft-top');
-const softSkillsBtn = document.getElementById('skills-soft-arrow');
-const softSkillsDivider = document.querySelector('.skills-soft-divider');
-const softSkillsList = document.querySelector('.skills-soft-list');
+const conditions = [
+  { query: '(min-width: 1510px)', hardHeight: '390px', softHeight: '380px' },
+  {
+    query: '(max-width: 1509px) and (min-width: 1130px)',
+    hardHeight: '390px',
+    softHeight: '290px',
+  },
+  {
+    query: '(max-width: 1129px) and (min-width: 710px)',
+    hardHeight: '360px',
+    softHeight: '260px',
+  },
+  { query: '(max-width: 710px)', hardHeight: '330px', softHeight: '260px' },
+];
 
-function toggleSkills(button, divider, list, height) {
-  const isOpen = button.style.transform === 'rotate(90deg)';
-
-  if (!isOpen) {
-    if (softSkillsBtn.style.transform === 'rotate(90deg)') {
-      softSkillsBtn.style.transform = 'rotate(0deg)';
-      softSkillsDivider.style.height = '3px';
-      softSkillsDivider.style.paddingBlock = '0px';
-      softSkillsList.classList.add('visually-hidden');
-    }
-
-    if (hardSkillsBtn.style.transform === 'rotate(90deg)') {
-      hardSkillsBtn.style.transform = 'rotate(0deg)';
-      hardSkillsDivider.style.height = '3px';
-      hardSkillsDivider.style.paddingBlock = '0px';
-      hardSkillsList.classList.add('visually-hidden');
-    }
-  }
-
-  button.style.transform = isOpen ? 'rotate(0deg)' : 'rotate(90deg)';
-  divider.style.height = isOpen ? '3px' : height;
-  divider.style.paddingBlock = isOpen ? '0px' : '10px';
-
-  list.classList.toggle('visually-hidden', isOpen);
+function closeAllSkills() {
+  skillsData.forEach((skill) => {
+    skill.btn.style.transform = 'rotate(0deg)';
+    skill.divider.style.height = '3px';
+    skill.divider.style.paddingBlock = '0px';
+    skill.list.classList.add('visually-hidden');
+  });
 }
 
-toggleSkills(hardSkillsBtn, hardSkillsDivider, hardSkillsList, '390px');
+function toggleSkills(skill, height) {
+  const { btn, divider, list } = skill;
+  const isOpen = btn.style.transform === 'rotate(90deg)';
 
-hardSkillsTop.addEventListener('click', () =>
-  toggleSkills(hardSkillsBtn, hardSkillsDivider, hardSkillsList, '390px')
-);
-softSkillsTop.addEventListener('click', () =>
-  toggleSkills(softSkillsBtn, softSkillsDivider, softSkillsList, '380px')
-);
+  closeAllSkills();
+
+  if (!isOpen) {
+    btn.style.transform = 'rotate(90deg)';
+    divider.style.height = height;
+    divider.style.paddingBlock = '10px';
+    list.classList.remove('visually-hidden');
+  }
+}
+
+function applyCondition(condition) {
+  skillsData[0].top.onclick = () =>
+    toggleSkills(skillsData[0], condition.hardHeight);
+  skillsData[1].top.onclick = () =>
+    toggleSkills(skillsData[1], condition.softHeight);
+}
+
+function setUpMediaQueries() {
+  conditions.forEach((condition) => {
+    const mediaQuery = window.matchMedia(condition.query);
+
+    const handleChange = () => {
+      if (mediaQuery.matches) {
+        closeAllSkills();
+        applyCondition(condition);
+      }
+    };
+
+    handleChange();
+
+    mediaQuery.addEventListener('change', handleChange);
+  });
+}
+
+window.addEventListener('load', setUpMediaQueries);
 
 // slider
 const slides = document.querySelectorAll('.slides img');
