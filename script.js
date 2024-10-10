@@ -26,7 +26,7 @@ const conditions = [
     hardHeight: '360px',
     softHeight: '260px',
   },
-  { query: '(max-width: 710px)', hardHeight: '330px', softHeight: '260px' },
+  { query: '(max-width: 710px)', hardHeight: '330px', softHeight: '265px' },
 ];
 
 function closeAllSkills() {

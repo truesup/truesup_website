@@ -784,3 +784,5 @@ header {
     width: 24px;
   }
 }
+@media (max-width: 430px) {
+}
